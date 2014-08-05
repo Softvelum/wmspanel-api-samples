@@ -1,0 +1,13 @@
+{
+  "status" : "Ok",
+  "data_slices" : [
+    {
+      "id" : "53e03c9978a6fc8596000001",
+      "name" : "Full data slice"
+    },
+    {
+      "id" : "53e03ca678a6fc8599000001",
+      "name" : "DS2"
+    }
+  ]
+}

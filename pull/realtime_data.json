@@ -1,0 +1,13 @@
+{
+  "status" : "Ok",
+  "realtime_data" : {
+    "connected" : 1,
+    "bandwidth" : 267784,
+    "geo" : [
+      [
+        "BR",
+        1
+      ]
+    ]
+  }
+}
