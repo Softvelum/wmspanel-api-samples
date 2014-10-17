@@ -1,5 +1,5 @@
 <?php
-// WMSPanel publish/un-publish stremas events notification sample
+// WMSPanel publish/un-publish streams events notification sample
 
 $r = $HTTP_RAW_POST_DATA;
 
