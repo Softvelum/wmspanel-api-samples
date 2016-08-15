@@ -3,9 +3,9 @@
 /*
    Simple WMSPanel API proxy
    use:
-   https://you_server/api_proxy.php?path=/v1/server/{{server_id}}/rtmp/app/&client_id={{client_id}}&api_key={{api_key}}
+   https://you_server/api_proxy.php?path=/v1/server/[server_id]/rtmp/app/&client_id=[client_id]&api_key=[api_key]
    instead of:
-   https://api.wmspanel.com/v1/server/{{server_id}}/rtmp/app/?client_id={{client_id}}&api_key={{api_key}}
+   https://api.wmspanel.com/v1/server/[server_id]/rtmp/app/?client_id=[client_id]&api_key=[api_key]
 */
 
 $allowed_ips = ['127.0.0.1','192.168.0.1'];
