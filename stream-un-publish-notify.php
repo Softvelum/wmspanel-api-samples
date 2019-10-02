@@ -15,13 +15,19 @@ fwrite($fp, "\r\n\r\n");
 
 $notification = json_decode($r, true); 
 
-//example of human-readable notification
+// example of human-readable notification for Wowza output
 $response = 
     date("Y-m-d H:i:s", time()) . ": stream published: " .
     $notification['ApiSyncRequest']['Publish']['VHostName'] . '/' .
     $notification['ApiSyncRequest']['Publish']['AppName'] . '/' .
     $notification['ApiSyncRequest']['Publish']['AppInstanceName'] . '/' .
     $notification['ApiSyncRequest']['Publish']['StreamName'];
+
+// example for Nimble Streamer
+$response = 
+    date("Y-m-d H:i:s", time()) . ": stream published: " .
+    $notification['publish'][0]['stream'];
+
 
 //saving to log file
 fwrite($fp, $response);
