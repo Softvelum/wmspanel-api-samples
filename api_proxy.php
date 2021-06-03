@@ -33,7 +33,7 @@ unset($_GET['path']);
 
 $curl = curl_init();
 
-curl_setopt($curl, CURLOPT_URL, 'https://api.wmspanel.com'.$path.'?'.http_build_query($_GET));
+curl_setopt($curl, CURLOPT_URL, 'https://api.wmspanel.com'.$path.'&'.http_build_query($_GET));
 curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $_SERVER['REQUEST_METHOD']);
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' || $_SERVER['REQUEST_METHOD'] === 'PUT') {
