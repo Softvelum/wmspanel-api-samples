@@ -1,11 +1,15 @@
 <?php
 // WMSPanel publish/un-publish streams events notification sample
 
-$r = $HTTP_RAW_POST_DATA;
+if($_SERVER['REQUEST_METHOD'] !== "POST") {
+    die("notifications are only sent as a POST request.");
+}
+
+$data = file_get_contents("php://input");
 
 $fp = fopen('log.txt', 'a+');
 
-fwrite($fp, $r);
+fwrite($fp, $data);
 
 fwrite($fp, "\r\n\r\n");
 
@@ -13,7 +17,7 @@ fwrite($fp, "\r\n\r\n");
 
 // Use this further processing in case you have PECL installed
 
-$notification = json_decode($r, true); 
+$notification = json_decode($data, true);
 
 // example of human-readable notification for Wowza output
 $response = 
@@ -36,4 +40,3 @@ fwrite($fp, "\r\n\r\n");
 */
 
 fclose($fp);
-?>
